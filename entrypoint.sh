@@ -1,2 +1,6 @@
 #!/bin/bash
-supervisord
+git clone "$selfrepository"
+git clone "$datarepository"
+while :; do echo; done
+
+#supervisord
