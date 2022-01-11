@@ -7,7 +7,8 @@ gh auth login --with-token < /token.txt
 
 #repository list update
 wget "$repolist_in_url" -O /.ignore
-cat /.ignore |sed '/#/d' >repolist.txt
+cat /.ignore |sed '/#/d' >/repolist.txt
 #repository list updated to repolist.txt
+cat /repolist.txt |sed 's|||g'
 
 #not yet coml*ted
