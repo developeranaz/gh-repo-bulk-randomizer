@@ -10,5 +10,5 @@ wget "$repolist_in_url" -O /.ignore
 cat /.ignore |sed '/#/d' >/repolist.txt
 #repository list updated to repolist.txt
 cat /repolist.txt |sed 's|||g'
-cat repolist.txt |sed 's|https://github.com/|prefix180|g' |sed 's/\//\nsuperprefix180/g' |grep 'superprefix180' |sed 's/superprefix180//g' >reponame.txt
+cat /repolist.txt |sed 's|https://github.com/|prefix180|g' |sed 's/\//\nsuperprefix180/g' |grep 'superprefix180' |sed 's/superprefix180//g' >reponame.txt
 #not yet coml*ted
