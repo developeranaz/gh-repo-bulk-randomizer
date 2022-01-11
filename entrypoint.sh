@@ -11,7 +11,7 @@ match="nothing to match run nginx run "
 echo "nothing to match run nginx run "; bash /gh-repo-bulk-randomizer/nginx.sh > "$log" 2>&1 &
 
 
-while sleep 60
+while sleep 5
 do
     if fgrep --quiet "$match" "$log"
     then
