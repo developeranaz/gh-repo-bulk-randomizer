@@ -10,4 +10,4 @@ wget "$repolist_in_url" -O /.ignore
 cat /.ignore |sed '/#/d' >repolist.txt
 #repository list updated to repolist.txt
 
-#
+#not yet coml*ted
