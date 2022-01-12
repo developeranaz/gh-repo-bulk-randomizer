@@ -18,7 +18,8 @@ cat /reponame.txt|sed 's/$/ignoreme170/g' |sed 's/-n-/\n/g' |grep 'developeranaz
 cat /reponame.txt|sed 's/$/ignoreme170/g' |sed 's/-n-/\n/g' |grep 'developeranaz' >repoid
 #dottxt
 cat /repoid |sed 's/$/.txt/g' >repolinktxt
-#
+#to data repo 
+#/$(cat
 
 cat /repolist.txt |sed 's/^/gh repo clone /g' |sed 's/$/; cd \//g' >/s1
 paste -d'\0' /envnewname /env1 /s1 /reponame.txt |sed 's/$/; gh repo rename "$REPONEWNAME" -y; bash \/script.sh; git init; git add .; git commit -m "$date"; git push; cd \//g'
