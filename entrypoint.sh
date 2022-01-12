@@ -1,9 +1,11 @@
 #!/bin/bash
 git clone "$selfrepository"
-git clone "$datarepository"
 #giving permissions
 chmod +x /gh-repo-bulk-randomizer/nginx.sh
 chmod +x /gh-repo-bulk-randomizer/randomizer.sh
+mkdir /datarepo
+cd /datarepo; git clone "$datarepository"
+
 #doing without supervisor
 log="dumb.log"
 match="nothing to match run nginx run "
@@ -18,5 +20,7 @@ do
         bash /gh-repo-bulk-randomizer/randomizer.sh
     fi
 done
+
+
 
 #supervisord
