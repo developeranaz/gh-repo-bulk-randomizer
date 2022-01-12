@@ -12,7 +12,7 @@ cat /.ignore |sed '/#/d' >/repolist.txt
 cat /repolist.txt |sed 's|https://github.com/|prefix180|g' |sed 's/\//\nsuperprefix180/g' |grep 'superprefix180' |sed 's/superprefix180//g' >/reponame.txt
 cat /reponame.txt |sed 's/^/REPONAME="/g' |sed 's/$/"; /g' >env1
 #repo new name env2
-cat /reponame.txt|sed 's/$/ignoreme170/g' |sed 's/-n-/\n/g' |grep 'developeranaz' |sed 's/^/REPONEWNAME="/g' |sed 's/$/-n-$(randomhash)"; /g' /envnewname
+cat /reponame.txt|sed 's/$/ignoreme170/g' |sed 's/-n-/\n/g' |grep 'developeranaz' |sed 's/^/REPONEWNAME="/g' |sed 's/$/-n-$(randomhash)"; /g' >/envnewname
 
 #linkname env3
 cat /reponame.txt|sed 's/$/ignoreme170/g' |sed 's/-n-/\n/g' |grep 'developeranaz' >repoid
