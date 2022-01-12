@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$RANDOM$(date)$RANDOM" |md5sum |sed 's/  -//g'
