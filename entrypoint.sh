@@ -8,9 +8,9 @@ cd /datarepo; git clone "$datarepository"
 
 #doing without supervisor
 log="dumb.log"
-match="nothing to match run nginx run "
+match="nothing to match run nginx run"
 
-echo "nothing to match run nginx run "; bash /gh-repo-bulk-randomizer/nginx.sh > "$log" 2>&1 &
+echo "nothing"; bash /gh-repo-bulk-randomizer/nginx.sh > "$log" 2>&1 &
 
 
 while sleep 5
