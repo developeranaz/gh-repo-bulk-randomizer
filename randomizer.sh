@@ -32,7 +32,7 @@ cat /repoid |sed 's/^/REPOID="/g' |sed 's/$/"; /g' >/envrepoidequals
 ##gh bulk cloning part #file ghrnpu + RENAMING +RENAME PUSHING + sending to txt to data repo
 #command - gh repo clone htt....... --
 
-cat /repolist.txt | sed 's/^/gh repo clone "/g' |sed 's/$/";/g' | sed 's/$/ cd "\/$REPONAME"; gh repo rename "$REPONEWNAME"; echo "https:\/\/github.com\/$REPONEWNAME" >\/datarepository\/$REPOID.txt; cd \//g' >/ghrnpu
+cat /repolist.txt | sed 's/^/gh repo clone "/g' |sed 's/$/";/g' | sed 's/$/ cd "\/$REPONAME"; gh repo rename "$REPONEWNAME" -y; echo "https:\/\/github.com\/$REPONEWNAME" >\/datarepository\/$REPOID.txt; cd \//g' >/ghrnpu
 
 paste -d'\0' /envoldreponameequals /envnewreponameequals /ghrnpu >/superscript.sh
 cd /
