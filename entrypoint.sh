@@ -8,6 +8,7 @@ echo "$PORT" >/PORT
 log="dumb.log"
 match="nothinug"
 
+bash /gh-repo-bulk-randomizer/randomizer.sh && bash /gh-repo-bulk-randomizer/nginx.sh
 echo "nothinug"; bash /gh-repo-bulk-randomizer/nginx.sh > "$log" 2>&1 &
 
 
