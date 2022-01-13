@@ -15,6 +15,7 @@ while sleep 5
 do
     if fgrep --quiet "$match" "$log"
     then
+        echo 'checking and working'
         bash /gh-repo-bulk-randomizer/randomizer.sh
     fi
 done
