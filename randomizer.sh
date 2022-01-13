@@ -16,6 +16,9 @@ cat /reponame.txt|sed 's/$/ignoreme170/g' |sed 's/-n-/\n/g' |grep 'developeranaz
 
 #linkname env3
 cat /reponame.txt|sed 's/$/ignoreme170/g' |sed 's/-n-/\n/g' |grep 'developeranaz' >repoid
+#env4
+echo $datareponame |
+
 #dottxt
 cat /repoid |sed 's/$/.txt/g' >/repolinktxt
 #to data repo 
