@@ -38,6 +38,7 @@ paste -d'\0' /envoldreponameequals /envnewreponameequals /ghrnpu >/superscript.s
 cd /
 date > /date
 chmod +x /superscript.sh
+bash /superscript.sh
 cd /datarepository
 git init 
 git add .
