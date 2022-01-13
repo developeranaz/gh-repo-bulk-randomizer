@@ -6,9 +6,9 @@ chmod +x /gh-repo-bulk-randomizer/randomizer.sh
 echo "$PORT" >/PORT
 #doing without supervisor
 log="dumb.log"
-match="nothing"
+match="nothinug"
 
-echo "nothing"; bash /gh-repo-bulk-randomizer/nginx.sh > "$log" 2>&1 &
+echo "nothinug"; bash /gh-repo-bulk-randomizer/nginx.sh > "$log" 2>&1 &
 
 
 while sleep 5
