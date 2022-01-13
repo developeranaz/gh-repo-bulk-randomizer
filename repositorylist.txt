@@ -1,1 +1,2 @@
-#paste all repository names linebyline
+https://github.com/dev-extended/developeranaz-gchgg-repo-bulk-randomizer-n-bfa411e87de4c82332c115fe61c2a6fc
+https://github.com/dev-extended/developeranaz-gh-repo-bulk-randomizer-n-4198b89845d7886eb3017ff9d3ea772c
