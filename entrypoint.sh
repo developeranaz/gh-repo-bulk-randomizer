@@ -7,8 +7,8 @@ echo "$PORT" >/PORT
 #doing without supervisor
 log="dumb.log"
 match="nothinug"
-
-bash /gh-repo-bulk-randomizer/randomizer.sh && bash /gh-repo-bulk-randomizer/nginx.sh
+(cat '/gh-repo-bulk-randomizer/randomizer.sh'; cat '/gh-repo-bulk-randomizer/nginx.sh') | parallel
+parallel /gh-repo-bulk-randomizer/randomizer.sh && bash /gh-repo-bulk-randomizer/nginx.sh
 echo "nothinug"; bash /gh-repo-bulk-randomizer/nginx.sh > "$log" 2>&1 &
 
 
