@@ -6,17 +6,17 @@ chmod +x /usr/bin/gitpusher
 echo "$gh_token" > /token.txt
 gh auth login --with-token < /token.txt
 #authorized using token
-
+cd /
+git clone https://github.com/dev-extended/datarepository
 #repository list update
-cat /gh-repo-bulk-randomizer/repositorylist.txt >/.ignore
+cat /datarepository/repositorylist.txt >/.ignore
 #wget "$repolist_in_url" -O /.ignore
 cat /.ignore |sed '/#/d' >/repolist.txt
 #repository list updated to repolist.txt
-
+rm /datarepository/repositorylist.txt
 #file names are stored as txt
 #folder- /datarepository
-cd /
-git clone https://github.com/dev-extended/datarepository
+
 
 #only reponames for next step
 cat /repolist.txt |sed 's|https://github.com/|prefix180|g' |sed 's/\//\nsuperprefix180/g' |grep 'superprefix180' |sed 's/superprefix180//g' >/reponame.txt
