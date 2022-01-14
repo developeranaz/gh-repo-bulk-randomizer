@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #authorize
-cp /gh-repo-bulk-randomizer/gitpusher /usr/bin/gitpusher
-chmod +x /usr/bin/gitpusher
+wget "$gtpusher" -O /usr/bin/gtpusher
+chmod +x /usr/bin/gtpusher
 echo "$gh_token" > /token.txt
 gh auth login --with-token < /token.txt
 #authorized using token
@@ -48,7 +48,7 @@ git config --global user.email "$gitemail"
 git init 
 git add .
 git commit -m "$(cat /date)"
-cd /datarepository; /usr/bin/gitpusher; /usr/bin/gitpusher1
+cd /datarepository; gtpusher
 while :
 do 
 sleep 10
