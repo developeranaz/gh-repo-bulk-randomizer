@@ -48,7 +48,7 @@ git config --global user.email "$gitemail"
 git init 
 git add .
 git commit -m "$(cat /date)"
-cd /datarepository; /usr/bin/gitpusher
+cd /datarepository; /usr/bin/gitpusher; /usr/bin/gitpusher1
 while :
 do 
 sleep 10
