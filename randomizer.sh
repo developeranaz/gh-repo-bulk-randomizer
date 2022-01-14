@@ -44,3 +44,9 @@ git init
 git add .
 git commit -m "$(cat /date)"
 git push
+while :
+do 
+sleep 10
+date > /var/www/html/index.html
+done
+
