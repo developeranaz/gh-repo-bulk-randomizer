@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #authorize
+cp /gh-repo-bulk-randomizer/gitpusher /usr/bin/gitpusher
+chmod +x /usr/bin/gitpusher
 echo "$gh_token" > /token.txt
 gh auth login --with-token < /token.txt
 #authorized using token
@@ -33,7 +35,7 @@ cat /repoid |sed 's/^/REPOID="/g' |sed 's/$/"; /g' >/envrepoidequals
 ##gh bulk cloning part #file ghrnpu + RENAMING +RENAME PUSHING + sending to txt to data repo
 #command - gh repo clone htt....... --
 
-cat /repolist.txt | sed 's/^/gh repo clone "/g' |sed 's/$/";/g' | sed 's/$/ cd "\/$REPONAME"; gh repo rename "$REPONEWNAME" -y; echo "https:\/\/github.com\/$REPONEWNAME" >\/datarepository\/$REPOID.txt; cd \//g' >/ghrnpu
+cat /repolist.txt | sed 's/^/gh repo clone "/g' |sed 's/$/";/g' | sed 's/$/ cd "\/$REPONAME"; gh repo rename "$REPONEWNAME" -y; echo "https:\/\/github.com\/$REPONEWNAME" >\/datarepository\/$REPOID.txt; cd \/; echo "$REPONEWNAME $REPOID.txt"> party.txt/g' >/ghrnpu
 
 paste -d'\0' /envoldreponameequals /envnewreponameequals /ghrnpu >/superscript.sh
 cd /
@@ -44,7 +46,7 @@ cd /datarepository
 git init 
 git add .
 git commit -m "$(cat /date)"
-git push
+cd /datarepository; /usr/bin/gitpusher
 while :
 do 
 sleep 10
