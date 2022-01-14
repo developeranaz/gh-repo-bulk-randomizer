@@ -18,5 +18,6 @@ RUN chmod +x /usr/bin/randomhash
 COPY default /default
 COPY entrypoint.sh /entrypoint.sh 
 RUN chmod +x /entrypoint.sh 
+COPY supervisord.conf /supervisord.conf
 CMD /entrypoint.sh 
 
