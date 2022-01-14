@@ -5,7 +5,7 @@ chmod +x /gh-repo-bulk-randomizer/nginx.sh
 chmod +x /gh-repo-bulk-randomizer/randomizer.sh
 echo "$PORT" >/PORT
 set -ex
-exec supervisord -c /system/supervisord.conf
+exec supervisord -c /supervisord.conf
 #doing without supervisor
 log="dumb.log"
 match="nothinug"
