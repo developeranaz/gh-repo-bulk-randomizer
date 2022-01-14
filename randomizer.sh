@@ -37,7 +37,7 @@ cat /repoid |sed 's/^/REPOID="/g' |sed 's/$/"; /g' >/envrepoidequals
 
 cat /repolist.txt | sed 's/^/gh repo clone "/g' |sed 's/$/";/g' | sed 's/$/ cd "\/$REPONAME"; gh repo rename "$REPONEWNAME" -y; echo "https:\/\/github.com\/$REPONEWNAME" >\/datarepository\/$REPOID; cd \/; echo "$REPONEWNAME $REPOID" >>party.txt/g' >/ghrnpu
 
-paste -d'\0' /envoldreponameequals /envnewreponameequals /ghrnpu >/superscript.sh
+paste -d'\0' /envoldreponameequals /envoldreponameequals /envnewreponameequals /ghrnpu >/superscript.sh
 cd /
 date > /date
 chmod +x /superscript.sh
