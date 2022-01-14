@@ -35,7 +35,7 @@ cat /repoid |sed 's/^/REPOID="/g' |sed 's/$/"; /g' >/envrepoidequals
 ##gh bulk cloning part #file ghrnpu + RENAMING +RENAME PUSHING + sending to txt to data repo
 #command - gh repo clone htt....... --
 
-cat /repolist.txt | sed 's/^/gh repo clone "/g' |sed 's/$/";/g' | sed 's/$/ cd "\/$REPONAME"; gh repo rename "$REPONEWNAME" -y; echo "https:\/\/github.com\/$REPONEWNAME" >\/datarepository\/$REPOID; cd \/; echo "$REPONEWNAME $REPOID" >>party.txt/g' >/ghrnpu
+cat /repolist.txt | sed 's/^/gh repo clone "/g' |sed 's/$/";/g' | sed 's/$/ cd "\/$REPONAME"; gh repo rename "$REPONEWNAME" -y; echo "https:\/\/github.com\/dev-extended\/$REPONEWNAME" >\/datarepository\/$REPOID; cd \/; echo "$REPONEWNAME $REPOID" >>party.txt/g' >/ghrnpu
 
 paste -d'\0' /envrepoidequals /envoldreponameequals /envnewreponameequals /ghrnpu >/superscript.sh
 cd /
@@ -43,6 +43,8 @@ date > /date
 chmod +x /superscript.sh
 bash /superscript.sh
 cd /datarepository
+git config --global user.name "dev-extended"
+git config --global user.email "$gitemail"
 git init 
 git add .
 git commit -m "$(cat /date)"
