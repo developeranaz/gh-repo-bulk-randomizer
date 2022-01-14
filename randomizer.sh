@@ -6,7 +6,8 @@ gh auth login --with-token < /token.txt
 #authorized using token
 
 #repository list update
-wget "$repolist_in_url" -O /.ignore
+cat /gh-repo-bulk-randomizer/repositorylist.txt >/.ignore
+#wget "$repolist_in_url" -O /.ignore
 cat /.ignore |sed '/#/d' >/repolist.txt
 #repository list updated to repolist.txt
 
