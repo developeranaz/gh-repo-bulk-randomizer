@@ -49,6 +49,8 @@ git init
 git add .
 git commit -m "$(cat /date)"
 cd /datarepository; gtpusher
+cd /
+curl "$PINGBOT"
 while :
 do 
 sleep 10
