@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+
+spawn git push
+
+sleep 5
+expect "sername"
+send "dev-extended\r"
+sleep 5
+expect "assword"
+send "$gh_token\r"
+sleep 5
+expect "100"
+send "ok"
