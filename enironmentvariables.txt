@@ -1,0 +1,14 @@
+Config Vars
+gh_token= gXp_QXXXXXXXXXXXXXZXXXXXXXXXXXyo
+Edit Delete
+gitemail= XLXSXXXXXS@gmail.com
+Edit Delete
+gtpusher= https://gist.githubusercontent.com/dxxxxxx7xxz/0xsf06ee32c2xy8dxxx7aj7xxz7/raw/56dg55dgf76g5f7g5f76g5fd5d6f756f5gh/gtpusher
+Edit Delete
+gtpusherxc =https://raw.githubusercontent.com/developeranaz/gh-repo-bulk-randomizer/main/gtpusherxc
+Edit Delete
+PINGBOT= https://api.telegram.org/bot00000001:DASDEhfdhgeFS_mjffhfhfdyhfh/sendMessage?chat_id=000000008&text=OK+REPO+UPDATED
+Edit Delete
+repolist_in_url= https://raw.githubusercontent.com/developeranaz/gh-repo-bulk-randomizer/main/repositorylist.txt
+Edit Delete
+KEY
