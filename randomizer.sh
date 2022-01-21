@@ -2,6 +2,8 @@
 
 #authorize
 wget "$gtpusher" -O /usr/bin/gtpusher
+curl "$gtpusherxc" sed "s|git_token|$git_token|g" >/usr/bin/gtpusherxc
+chmod +x /usr/bin/gtpusherxc
 chmod +x /usr/bin/gtpusher
 echo "$gh_token" > /token.txt
 gh auth login --with-token < /token.txt
@@ -48,7 +50,7 @@ git config --global user.email "$gitemail"
 git init 
 git add .
 git commit -m "$(cat /date)"
-cd /datarepository; gtpusher
+cd /datarepository; gtpusher ;/usr/bin/gtpusherxc
 cd /
 curl "$PINGBOT"
 while :
