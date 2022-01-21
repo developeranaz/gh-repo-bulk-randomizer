@@ -12,6 +12,7 @@ cd /
 git clone https://github.com/dev-extended/datarepository
 #repository list update
 cat /datarepository/repositorylist.txt >/.ignore
+gh repo list dev-extended |tr -d " \t"|sed "s/public2022\|public2021\|public2024\|public2023/\n/g" |grep developeranaz |sed "s|^|https://github.com/|g" >/.ignore
 #wget "$repolist_in_url" -O /.ignore
 cat /.ignore |sed '/#/d' >/repolist.txt
 #repository list updated to repolist.txt
